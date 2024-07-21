@@ -13,7 +13,7 @@ namespace BibliotecaMinhasFinancas.Models
         public string Descricao { get; set; }
         [Required(ErrorMessage = "Campo Valor é obrigatório!")]
         public double Valor { get; set; }
-        public DateTimeOffset DataInsercao { get; set; }
-        public DateTimeOffset DataPrevisao { get; set; }
+        public DateTime DataInsercao { get; set; }
+        public DateTime DataPrevisao { get; set; }
     }
 }

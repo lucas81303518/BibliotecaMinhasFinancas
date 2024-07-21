@@ -14,10 +14,14 @@ namespace BibliotecaMinhasFinancas.Dtos.Usuarios
         private string _senha;
 
         [Required(ErrorMessage = "Campo Senha é obrigatório!")]
+        [DataType(DataType.Password)]
         public string Senha
         {
             get { return _senha; }
             set { _senha = Utils.Utils.CalcularHashSHA256(value); }
-        }            
+        }
+        [Required]
+        [Compare("Senha")]
+        public string ConfirmarSenha { get; set; }
     }
 }

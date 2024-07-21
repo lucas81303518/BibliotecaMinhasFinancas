@@ -11,13 +11,13 @@ namespace BibliotecaMinhasFinancas.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         [Required(ErrorMessage = "Campo Numero do Documento é obrigatório!")]
-        public string NumeroDocumento { get; set; }
-        [Required(ErrorMessage = "Campo Numero do Documento é obrigatório!")]
+        public string NumeroDocumento { get; set; }        
         public string Descricao { get; set; }
         [Required(ErrorMessage = "Campo Valor do Documento é obrigatório!")]
         public double Valor { get; set; }
         [Required(ErrorMessage = "Campo Data do Documento é obrigatório!")]
-        public DateTimeOffset DataDocumento { get; set; }
+        [Column(TypeName = "date")]
+        public DateTime DataDocumento { get; set; }
         public int QtdParcelas { get; set; }
         [Required(ErrorMessage = "Campo Status do Documento é obrigatório!")]
         public string Status { get; set; }

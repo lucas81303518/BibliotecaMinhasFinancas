@@ -8,7 +8,7 @@ namespace BibliotecaMinhasFinancas.Data.Dtos.Transferencias
         public string Descricao { get; set; }        
         public int ContaOrigem { get; set; }        
         public int ContaDestino { get; set; }
-        public DateTimeOffset DataTransferencia { get; set; }        
+        public DateTime DataTransferencia { get; set; }        
         public double Valor { get; set; }
     }
 }

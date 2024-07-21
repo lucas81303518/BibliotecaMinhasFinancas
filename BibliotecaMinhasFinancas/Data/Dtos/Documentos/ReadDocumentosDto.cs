@@ -2,6 +2,7 @@
 using BibliotecaMinhasFinancas.Data.Dtos.FormasPagamento;
 using BibliotecaMinhasFinancas.Data.Dtos.TipoContas;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BibliotecaMinhasFinancas.Data.Dtos.Documentos
 {
@@ -11,7 +12,8 @@ namespace BibliotecaMinhasFinancas.Data.Dtos.Documentos
         public string NumeroDocumento { get; set; }
         public string Descricao { get; set; }
         public double Valor { get; set; }
-        public DateTimeOffset DataDocumento { get; set; }
+        [Column(TypeName = "date")]
+        public DateTime DataDocumento { get; set; }
         public int QtdParcelas { get; set; }
         public string Status { get; set; }
         public int CodigoMeta { get; set; }

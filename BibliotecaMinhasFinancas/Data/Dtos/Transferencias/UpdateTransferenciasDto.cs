@@ -9,7 +9,7 @@ namespace BibliotecaMinhasFinancas.Dtos.Transferencias
         public int ContaOrigem { get; set; }
         [Required(ErrorMessage = "Campo Conta Destino é obrigatório!")]
         public int ContaDestino { get; set; }
-        public DateTimeOffset DataTransferencia { get; set; }
+        public DateTime DataTransferencia { get; set; }
         [Required(ErrorMessage = "Campo Valor é obrigatório!")]
         public double Valor { get; set; }
     }
