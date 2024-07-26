@@ -18,5 +18,8 @@ namespace BibliotecaMinhasFinancas.Models
         public DateTime DataTransferencia { get; set; }
         [Required(ErrorMessage = "Campo Valor é obrigatório!")]
         public double Valor { get; set; }
+        [Required]
+        public int UsuarioId { get; set; }
+        public virtual Usuarios Usuario { get; set; }
     }
 }

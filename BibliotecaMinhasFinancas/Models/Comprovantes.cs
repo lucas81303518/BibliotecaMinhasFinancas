@@ -18,5 +18,8 @@ namespace BibliotecaMinhasFinancas.Models
         [Required(ErrorMessage = "Documento é obrigatório!")]
         public int DocumentoId { get; set; }
         public virtual Documentos Documento { get; set; }
+        [Required]
+        public int UsuarioId { get; set; }
+        public virtual Usuarios Usuario { get; set; }
     }
 }

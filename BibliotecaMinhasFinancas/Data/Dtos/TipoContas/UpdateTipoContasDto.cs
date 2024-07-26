@@ -8,5 +8,7 @@ namespace BibliotecaMinhasFinancas.Data.Dtos.TipoContas
         public string NomeConta { get; set; }
         [Required(ErrorMessage = "Campo Tipo da Conta é obrigatório!")]
         public int Tipo { get; set; }
+        [Required]
+        public int UsuarioId { get; set; }
     }
 }

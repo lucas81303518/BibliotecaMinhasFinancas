@@ -12,5 +12,7 @@ namespace BibliotecaMinhasFinancas.Data.Dtos.Comprovantes
         [Required(ErrorMessage = "Campo Tipo do Comprovante é obrigatório!")]
         public string TipoComprovante { get; set; }
         public int DocumentoId { get; set; }
+        [Required]
+        public int UsuarioId { get; set; }       
     }
 }

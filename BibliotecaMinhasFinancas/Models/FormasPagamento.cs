@@ -12,6 +12,9 @@ namespace BibliotecaMinhasFinancas.Models
         [Required(ErrorMessage = "Campo Nome é obrigatório!")]        
         public string Nome { get; set; }
         [Required(ErrorMessage = "Campo Valor é obrigatório!")]        
-        public double Valor { get; set; }       
+        public double Valor { get; set; }
+        [Required]
+        public int UsuarioId { get; set; }
+        public virtual Usuarios Usuario { get; set; }
     }
 }
