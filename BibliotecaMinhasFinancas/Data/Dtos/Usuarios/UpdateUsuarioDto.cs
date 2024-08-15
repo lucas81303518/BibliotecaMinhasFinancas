@@ -24,5 +24,7 @@ namespace BibliotecaMinhasFinancas.Dtos.Usuarios
         [Required(ErrorMessage = "Campo Celular")]
         [DataType(DataType.PhoneNumber)]
         public string PhoneNumber { get; set; }
+        [MaxLength(1048576)]
+        public string FotoBase64 { get; set; } = string.Empty;
     }
 }

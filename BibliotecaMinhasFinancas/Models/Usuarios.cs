@@ -11,8 +11,8 @@ namespace BibliotecaMinhasFinancas.Models
         [Required]
         [Column(TypeName = "date")]
         public DateTime DataNascimento { get; set; }
-        [MaxLength(1048576)] 
-        public string FotoBase64 { get; set; }
+        [MaxLength(1048576)]
+        public string FotoBase64 { get; set; } = string.Empty;
         public Usuarios()
                :base()
         {
