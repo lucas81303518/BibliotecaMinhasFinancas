@@ -4,7 +4,9 @@ using System.ComponentModel.DataAnnotations;
 namespace BibliotecaMinhasFinancas.Dtos.Usuarios
 {
     public class UpdateUsuarioDto
-    {       
+    {
+        [Required(ErrorMessage = "Campo Nome Completo é obrigatório!")]
+        public string NomeCompleto { get; set; }
         [Required(ErrorMessage = "Campo Nome é obrigatório!")]
         public string UserName { get; set; }
 
@@ -14,12 +16,12 @@ namespace BibliotecaMinhasFinancas.Dtos.Usuarios
         [Required(ErrorMessage = "Campo Senha é obrigatório!")]
         [DataType(DataType.Password)]
         public string Password { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Campo Repetir Senha é obrigatório!")]
         [Compare("Password")]
         public string RePassword { get; set; }
-        [Required]       
+        [Required(ErrorMessage = "Campo Data de Nascimento!")]
         public DateTime DataNascimento { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Campo Celular")]
         [DataType(DataType.PhoneNumber)]
         public string PhoneNumber { get; set; }
     }
