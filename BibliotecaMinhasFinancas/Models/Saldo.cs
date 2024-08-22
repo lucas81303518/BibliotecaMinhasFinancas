@@ -3,14 +3,10 @@
 
 namespace BibliotecaMinhasFinancas.Models
 {
-    public class SaldoMensal
+    public class Saldo
     {
         [Required]
-        public int Id { get; set; }
-        [Required]
-        public int Mes { get; set; }
-        [Required]
-        public int Ano { get; set; }
+        public int Id { get; set; }      
         [Required]
         public double ValorTotal { get; set; }  
         [Required]
