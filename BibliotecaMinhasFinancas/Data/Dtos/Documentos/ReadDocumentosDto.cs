@@ -18,7 +18,6 @@ namespace BibliotecaMinhasFinancas.Data.Dtos.Documentos
         public string Status { get; set; }
         public int CodigoMeta { get; set; }
         public ReadFormaPagamentoDto FormaPagamento { get; set; }
-        public ReadTipoContaDto TipoConta { get; set; }
-        public ReadUsuariosDto Usuario { get; set; }
+        public ReadTipoContaDto TipoConta { get; set; }      
     }
 }
